@@ -1,0 +1,38 @@
+.header {
+  .header__content {
+    padding: 5px 70px;
+    background: black;
+    width: 100%;
+
+    #header__title {
+      a {
+        img {
+          width: 50px;
+        }
+      }
+    }
+    .header_nav {
+      .nav {
+        .nav-item {
+          a {
+            color: white;
+            font-size: 15px;
+          }
+          a:hover {
+            color: red;
+          }
+        }
+        .nav-item:nth-child(4) {
+          position: relative;
+        }
+        .nav-item:nth-child(4)::after {
+          content: "/";
+          color: white;
+          position: absolute;
+          top: 7px;
+          left: 93px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!-- Nav tabs -->
+<div class="phim__content">
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Đang chiếu</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Sắp chiếu</a>
+        </li>
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="home">
+            <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let item of danhSachPhim" class="slide">
+                    <a href="">
+                        <img [src]="item.hinhAnh " alt="" width="100%">
+                    </a>
+                    <div class="phim_detail">
+                        <p>{{item.tenPhim}}</p>
+                    </div>
+                </div>
+            </ngx-slick>
+
+        </div>
+        <div class="tab-pane container fade" id="menu1">
+         
+            <ngx-slick class="carousel1" #slickModal="slick-modal" [config]="slideConfig1">
+                <div ngxSlickItem *ngFor="let item of danhSachPhim" class="slide">
+                    <a href="">
+                        <img [src]="item.hinhAnh " alt="" width="100%">
+                    </a>
+                    <div class="phim_detail">
+                        <p>{{item.tenPhim}}</p>
+                    </div>
+                </div>
+            </ngx-slick>
+        </div>
+    </div>
+</div>
