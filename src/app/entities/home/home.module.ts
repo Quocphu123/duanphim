@@ -8,13 +8,14 @@ import { SlickModule } from 'ngx-slick';
 import { PhimComponent } from 'src/app/Layout/phim/phim.component';
 import { MaterialModule } from 'src/app/common/material/material-routing.module';
 import { CumRapComponent } from 'src/app/Layout/cum-rap/cum-rap.component';
+import { NewsComponent } from 'src/app/Layout/news/news.component';
 
 
 
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, CarouselComponent, PhimComponent, CumRapComponent],
+  declarations: [HomeComponent, HeaderComponent, CarouselComponent, PhimComponent, CumRapComponent,NewsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
