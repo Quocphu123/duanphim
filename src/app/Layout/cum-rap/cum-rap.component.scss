@@ -1,11 +1,48 @@
 .cumRap {
   .cumRap__content {
     .cumRap_row {
+      
+      .cumRap_myLogo{
+        flex-direction: column;
+        li{
+          button{
+            border: none;
+            padding : 0;
+            outline-color: none;
+            margin-top: 20px;
+            img{
+              background-color: white;
+              width : 65px;
+              
+            }
+          }
+          button:focus {
+            outline:none;
+          }
+        }
+      }
       .cumRap_detailMovie {
         background-color: lightblue;
         width: 110px;
         height: 500px;
         overflow: scroll;
+      }
+      .imgCumRap{
+        img{
+          width : 65px;
+        }
+      }
+      .myCumRapBtn{
+        border: none;
+        padding : 0;
+        outline-color: none;
+        margin-top: 20px;
+        background-color: white;
+      }
+      .itemCumRap{
+        padding-top : 5px;
+        height:500px;
+        overflow : scroll;
       }
     }
   }

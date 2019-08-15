@@ -2,28 +2,36 @@
     <div class="cumRap__content">
         <h1>Cụm Rạp</h1>
         <div class="row cumRap_row">
-            <div class="col-sm-3">
-                <ul class="nav nav-tabs">
+
+            <div class="col-sm-1 cumRap_detail ">
+                <ul class="nav nav-tabs cumRap_myLogo">
                     <li class="nav-item" *ngFor="let item of danhSachRap">
-                        <button (click)="layChiTietRap(item)" >
-                            <img [src]="item.logo" alt="" style="width:100px">
+                        <button (click)="layChiTietRap(item)">
+                            <img [src]="item.logo" alt="">
                         </button>
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-3">
-                <div *ngFor="let item of cumRap ">
-                    <button (click)="layPhimCuaRap(item)">
-                        <span>{{item.tenCumRap}}</span>
-                        <span>{{item.diaChi}}</span>
+
+            <div class="col-sm-4 itemCumRap">
+                <div *ngFor="let item of cumRap">
+                    <button (click)="layPhimCuaRap(item)" class="d-flex myCumRapBtn">
+                        <div class="imgCumRap">
+                            <img src="../../../assets/images/hinhCumRap.jpg" alt="">
+                        </div>
+                        <div class="tenCumRap">
+                            <span>{{item.tenCumRap}}</span>
+                            <span>{{item.diaChi}}</span>
+                        </div>
                     </button>
                 </div>
             </div>
-            <div class="col-sm-6 cumRap_detailMovie">
+
+            <div class="col-sm-7 cumRap_detailMovie">
                 <div *ngFor="let item of danhSachPhim">
                     <img [src]=" item.hinhAnh">
                     <p>IMDb : {{item.danhGia}}</p>
-                    
+
                 </div>
             </div>
         </div>
