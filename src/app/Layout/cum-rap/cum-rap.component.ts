@@ -34,10 +34,13 @@ export class CumRapComponent implements OnInit {
   // Lấy chi tiết rạp
   layChiTietRap(maHeThongRap) {
     this.maHeThong = maHeThongRap.maHeThongRap
+    // this.maheThong = CGV
     this.quanLyRapService.layThongTinCumRap(this.maHeThong).subscribe((data: any) => {
       this.cumRap = data;
-      // console.log(this.cumRap);
+      console.log(this.cumRap);
     })
+
+    
     this.quanLyRapService.layThongTinHeThongLichChieuRap(this.maHeThong).subscribe((data: any) => {
       this.phimCumRap = data
       console.log(data)
@@ -55,8 +58,6 @@ export class CumRapComponent implements OnInit {
   }
 
  
-
-
 
   layPhimCuaRap(value) {
     const chiTietRap = this.phimCumRap[0].lstCumRap.filter(item => item.maCumRap === value.maCumRap)
