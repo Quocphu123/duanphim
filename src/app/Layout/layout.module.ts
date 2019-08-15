@@ -7,11 +7,12 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { SlickModule } from 'ngx-slick';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CumRapComponent } from './cum-rap/cum-rap.component';
+import { NewsComponent } from './news/news.component';
 
 
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, CumRapComponent],
+  declarations: [LayoutComponent, HeaderComponent, CumRapComponent, NewsComponent],
   exports: [LayoutComponent],
   imports: [
     CommonModule,

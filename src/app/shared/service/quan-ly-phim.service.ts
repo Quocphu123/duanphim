@@ -26,6 +26,23 @@ export class QuanLyPhimService {
     )
   }
 
+  // Lấy thông tin phim
+  layThongTinPhim(maPhim): Observable<any> {
+    const url = `http://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`
+    return this.http.get(url).pipe(
+      tap(
+        (data: any) => {
+          // Thành công
+        },
+
+        catchError(err => {
+          return this.handleErr(err)
+          // Thất bại
+        })
+      )
+    )
+  }
+
   handleErr(err) {
     return err;
   }

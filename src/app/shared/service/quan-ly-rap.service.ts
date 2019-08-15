@@ -25,6 +25,41 @@ export class QuanLyRapService {
       )
     )
   }
+
+  // Lấy thông tin của các cụm rạp
+  layThongTinCumRap(maHeThongRap: any): Observable<any> {
+    const url = `http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${maHeThongRap}`
+    return this.http.get(url).pipe(
+      tap(
+        (data: any) => {
+          // Thành công
+        },
+
+        catchError(err => {
+          return this.handleErr(err)
+          // Thất bại
+        })
+      )
+    )
+  }
+
+  // Lấy thông tin hệ thống lịch chiếu rạp
+  layThongTinHeThongLichChieuRap(maHeThongRap:any): Observable<any> {
+    const url = `http://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${maHeThongRap}&maNhom=GP01`
+    return this.http.get(url).pipe(
+      tap(
+        (data: any) => {
+          // Thành công
+        },
+
+        catchError(err => {
+          return this.handleErr(err)
+          // Thất bại
+        })
+      )
+    )
+  }
+
   handleErr(err) {
     return err;
   }
