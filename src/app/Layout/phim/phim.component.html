@@ -1,6 +1,6 @@
 <!-- Nav tabs -->
 <div class="phim__content">
-    <ul class="nav nav-tabs justify-content-center">
+    <ul class="nav nav-tabs justify-content-center ">
         <li class="nav-item">
             <a class="nav-link active" data-toggle="tab" href="#home">Đang chiếu</a>
         </li>
@@ -11,22 +11,39 @@
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-        <div class="tab-pane container active" id="home">
-            <ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig">
-                <div ngxSlickItem *ngFor="let item of danhSachPhim" class="slide">
-                    <a href="">
-                        <img [src]="item.hinhAnh " alt="" width="100%">
-                    </a>
-                    <div class="phim_detail">
-                        <p>{{item.tenPhim}}</p>
+    <div class="tab-content phim__tab">
+        <div class="tab-pane container active phim__tab_detail" id="home">
+            <ngx-slick class="phim__tab_carousel carousel" #slickModal="slick-modal" [config]="slideConfig">
+                <div ngxSlickItem *ngFor="let item of danhSachPhim" class="slide phim__tab_slide">
+
+                    <div class="phim__tab_img">
+                        <a href="">
+                            <img [src]="item.hinhAnh " alt="" width="100%">
+                        </a>
+
+                        <div class="phim__tab_hover ">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                            <button class="btn btn-primary ">Mua vé</button>
+                        </div>
+
+                       
                     </div>
+
+                    <!-- Tên phim -->
+                    <p>{{item.tenPhim}}</p>
+
+                    <!-- Thẻ  -->
+
+
+
+
                 </div>
+
             </ngx-slick>
 
         </div>
         <div class="tab-pane container fade" id="menu1">
-         
+
             <ngx-slick class="carousel1" #slickModal="slick-modal" [config]="slideConfig">
                 <div ngxSlickItem *ngFor="let item of danhSachPhim" class="slide">
                     <a href="">

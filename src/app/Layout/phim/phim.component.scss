@@ -1,14 +1,83 @@
-.phim__content{
-    height: 500px;
-    ul{
+.phim__content {
+  height: 500px;
+  ul {
+    border: none;
+    li {
+      a {
         border: none;
-        li{
-            a{
-                border: none;
-            }
-            a:hover{
-                border: none;
-            }
-        }
+      }
+      a:hover {
+        border: none;
+      }
     }
+  }
+  .phim__tab {
+    .phim__tab_detail {
+      .phim__tab_carousel {
+        .phim__tab_slide {
+          padding: 15px;
+
+          // chỉnh hình
+          a {
+            img {
+              height: 350px;
+              border-radius: 5px;
+            }
+          }
+
+          .phim__tab_img {
+            // position: absolute;
+            // display: none
+            position: relative;
+
+            .phim__tab_hover {
+              //   position: absolute;
+              // opacity: 0;
+            }
+            i {
+              position: absolute;
+              top: 45%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 20px;
+              color: white;
+              border: 3px solid white;
+              border-radius: 50%;
+              padding: 20px;
+              display: none;
+              cursor: pointer;
+            }
+
+            button {
+              width: 100%;
+              margin-top: 10px;
+              display: none;
+            }
+          }
+        }
+        .phim__tab_slide:hover {
+          p {
+            display: none;
+          }
+          .phim__tab_hover {
+            i {
+              display: block;
+            }
+            button {
+              display: block;
+            }
+          }
+        }
+        // .phim__tab_slide hover
+        // .phim__tab_slide:hover {
+        //   .phim__tab_hover{
+        //     i,
+        //     button {
+        //       display:block;
+        //     }
+        //   }
+        // }
+      }
+    }
+  }
 }
